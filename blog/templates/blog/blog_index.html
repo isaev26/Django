@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title|upper }}{% endblock %}
+
+{% block header %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ title|upper }}</h1>
+            <p class="header-text">Тут иногда чем-то интересным буду поделиться.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% if blog %}
+                {% for news in blog %}
+                    <a href="{% url 'blog_detail' news.link %}">
+                        <div class="alert alert-warning">
+                            <h3>{{ news.title }}</h3>
+                            {% if news.anons == None %}
+                                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ news.full_text|safe|truncatechars:45 }}</div>
+                            {% else %}
+                                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ news.anons }}</p>
+                            {% endif %}
+                        </div>
+                    </a>
+                {% endfor%}
+            {% else %}
+                <p>У вас нет записей!</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,2 @@
+SECRET_KEY = 'vhszvz7=9dcr=e3=1%ep8*hd(v=b)n*y+7h!his85r^xhod2e#'
+DEBUG = True

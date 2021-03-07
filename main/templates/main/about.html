@@ -1,0 +1,37 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title|upper }}{% endblock %}
+
+{% block header %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-12">
+            <h1>НЕМНОГО {{ title|upper }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-4">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="{% static 'main/img/me.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Исаев Ислам</h5>
+                  <p class="card-text"><b>Программист-разработчик</b> Выпускник Воронежского государственного университета.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-sm-8">
+            <div class="card" {# style="min-height: 468px" #}>
+              <h5 class="card-header">Что я знаю и чем занимаюсь?</h5>
+              <div class="card-body">
+                <h5 class="card-title">Ключевые навыки</h5>
+                <p class="card-text"><b>PHP HTML CSS Bootstrap Less Sass SQL MSSQL Python C#</b></p>
+                <h5 class="card-title">Куда двигаюсь?</h5>
+                <p class="card-text"><b>Развиваю свои знание в ООП. Самостоятельно учу Битрикс, Django. Читаю о паттерн проектирование.</b></p>
+                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

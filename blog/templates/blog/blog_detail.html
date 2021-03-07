@@ -1,0 +1,37 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ article.title|upper }}{% endblock %}
+
+{% block header %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ article.title|upper }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-left">
+            <div class="blog-view">
+                <p>{{ article.full_text|safe }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="blog-view">
+                {% if article.tags.all %}
+                    Теги:
+                    {% for tag in article.tags.all %}
+                        {{ tag.name|capfirst }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-inline-flex pb-2">
+            <a class="back-url" href="{% url 'blog_index' %}">&laquo; Назад</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

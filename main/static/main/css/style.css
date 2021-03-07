@@ -1,0 +1,86 @@
+body{
+    background-color: #2c2c2c;
+    font-family: 'Source Code Pro', monospace;
+}
+aside{
+    float: left;
+    background-color: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+aside .logo{
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+aside h3{
+    margin-top: 50px;
+    font-size: 28px;
+}
+aside ul {list-style: none}
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: transform .06s;
+}
+aside ul li:hover, aside ul a:hover{
+    color: coral;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+header{
+    float: left;
+    color: #ffffff;
+}
+header .container-fluid{
+    text-align: center;
+    margin-top: 60px;
+    width: 75vw;
+}
+header .container-fluid h1{ font-size: 50px}
+header .container-fluid p{
+    max-width: 400px;
+    margin: 20px auto;
+}
+header .container-fluid .blog-view{
+    max-width: 100%;
+}
+header .container-fluid span.about-span{
+    display: inline-block;
+    max-width: 600px;
+    margin: 20px auto;
+}
+header .container-fluid .back-url{
+    color: white;
+    transition: transform .06s;
+}
+header .container-fluid .back-url:hover{
+    color: coral;
+    transform: scale(1.05);
+}
+header p.header-text{
+    max-width: 600px;
+}
+.alert-warning{
+    display: inline-grid;
+    text-align: left;
+    max-height: fit-content;
+}
+a:hover{
+    text-decoration: none;
+}
+.blog-view p{
+    max-width: max-content !important;
+}
+.card{
+    background-color: #2c2c2c;
+}
+.card p{
+    margin: 10px auto !important;
+    max-width: max-content!important;
+}
