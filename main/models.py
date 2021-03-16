@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# Модель формы контакты
 class Feedbacks(models.Model):
     name = models.CharField('Имя', max_length=50)
     email = models.CharField('Почта', max_length=50)

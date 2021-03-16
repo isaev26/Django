@@ -7,7 +7,7 @@ class Articles(models.Model):
     title = models.CharField('Название', max_length=50)
     link = models.SlugField('Ссылка на детальную страницу', max_length=50, unique=True,
                             help_text='Если автоматически сгенерированная ссылка вам не подходить, то измените ее '
-                                      'ручной')
+                                      'вручную')
     anons = models.CharField('Анонс', max_length=250, blank=True, null=True,
                              help_text='Если оставить пустой, то анонс создаться из первого абзаца новости!')
     full_text = HTMLField('Статья')

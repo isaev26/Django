@@ -3,8 +3,10 @@ from .models import Feedbacks
 from _datetime import datetime, timedelta
 from captcha.fields import CaptchaField
 
+
 class FeedbacksForm(ModelForm):
     captcha = CaptchaField()
+
     class Meta:
         model = Feedbacks
         fields = ['name', 'email', 'text', 'date']
@@ -25,7 +27,7 @@ class FeedbacksForm(ModelForm):
             }),
             'date': TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': datetime.now() + timedelta(hours=3),
+                'placeholder': datetime.now() + timedelta(hours=3),  # добавляю 3 часа на серверной время
                 'value': datetime.now() + timedelta(hours=3),
             }),
         }
